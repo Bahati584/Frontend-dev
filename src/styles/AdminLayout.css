@@ -1,0 +1,44 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Sidebar */
+  .admin-sidebar {
+    width: 220px;
+    background-color: #1e293b;
+    color: #fff;
+    padding: 30px 20px;
+  }
+  
+  .admin-sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-sidebar nav a {
+    display: block;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  
+  .admin-sidebar nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Main content */
+  .admin-main {
+    flex: 1;
+    background-color: #f1f5f9;
+    padding: 40px;
+  }
+  

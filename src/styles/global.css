@@ -1,0 +1,22 @@
+/* src/styles/global.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b; /* ✅ dark readable text */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #1f2937;
+  }
+  
+  a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
