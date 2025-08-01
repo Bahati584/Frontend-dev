@@ -3,8 +3,8 @@ import '../styles/UserList.css';
 
 const UserList = () => {
   const users = [
-    { name: 'Isaac Bahati', email: 'isaac@example.com' },
-    { name: 'Jane Doe', email: 'jane@example.com' }
+    { name: 'Isaac Bahati', email: 'isaac@example.com',number: '0712345678' },
+    { name: 'Jane Doe', email: 'jane@example.com',number: '0712345678' }
   ];
 
   return (
