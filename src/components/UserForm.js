@@ -19,6 +19,7 @@ const UserForm = () => {
       <form onSubmit={handleSubmit}>
         <input name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" />
         <input name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" />
+        <input name="number" value={formData.number} onChange={handleChange} placeholder="Phone Number" />
         <button type="submit">Submit</button>
       </form>
     </div>

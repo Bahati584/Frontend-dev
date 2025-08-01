@@ -15,6 +15,7 @@ const UserList = () => {
           <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>Phone Number</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@ const UserList = () => {
             <tr key={idx}>
               <td>{user.name}</td>
               <td>{user.email}</td>
+              <td>{user.number}</td>
             </tr>
           ))}
         </tbody>
