@@ -2,15 +2,34 @@ import React, { useState } from 'react';
 import '../styles/UserForm.css';
 
 const UserForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("Server response:", data);
+      alert("User created successfully!");
+
+      // Reset form
+      setFormData({ name: '', email: '', number: '' });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong.");
+    }
   };
 
   return (
@@ -19,7 +38,7 @@ const UserForm = () => {
       <form onSubmit={handleSubmit}>
         <input name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" />
         <input name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" />
-        <input name="number" value={formData.number} onChange={handleChange} placeholder="Phone Number" />
+        <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" />
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -27,6 +46,7 @@ const UserForm = () => {
 };
 
 export default UserForm;
+
 
 
 
