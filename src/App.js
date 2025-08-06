@@ -1,8 +1,10 @@
-import DashboardPage from './pages/DashboardPage';
-
-import './AppStyles.css';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+import './AppStyles.css';
+import './styles/global.css';
+
+import DashboardPage from './pages/DashboardPage';
 import AdminLayout from './layout/AdminLayout';
 import UserListPage from './pages/UserListPage';
 import AddUserPage from './pages/AddUserPage';
@@ -13,7 +15,7 @@ function App() {
       <Routes>
         {/* Admin Panel Routes */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<h2>Welcome to the Admin Dashboard</h2>} />
+          <Route index element={<DashboardPage />} />
           <Route path="users" element={<UserListPage />} />
           <Route path="add" element={<AddUserPage />} />
         </Route>
